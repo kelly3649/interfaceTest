@@ -1,18 +1,18 @@
-public abstract class Shape{
+public class Circle extends Shape{
 
-    private String name;
+    private double radius;
 
-    public Shape(){
-	name = "";
+    public Circle(double radius, String name){
+	super(name);
+	this.radius = radius;
     }
 
-    public Shape(String name){
-	this.name = name;
+    public double getRadius(){
+	return radius;
     }
 
-    public String getName(){
-	return name;
+    public String toString(){
+	return "Circle "+getName()+" with radius of "+getRadius();
     }
 
-    public abstract String toString();
 }
