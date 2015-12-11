@@ -1,4 +1,4 @@
-public class Rectangle extends Shape{
+public class Rectangle extends Shape implements Area{
 
     private double length,width;
 
@@ -18,5 +18,8 @@ public class Rectangle extends Shape{
 
     public String toString(){
 	return "Rectangle "+getName()+" that is "+length+" by "+width;
+    }
+    public double getArea(){
+	return getWidth()*getLength();
     }
 }
